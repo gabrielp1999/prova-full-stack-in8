@@ -7,6 +7,16 @@ export const Wrapper = styled.header`
   background-size: cover;
   background-repeat: no-repeat;
   /* opacity: ${({ showMenu }) => (showMenu ? "0.6" : "1")}; */
+
+  @media screen and (min-width: 744px) {
+    background-image: url("/img/index-image.jpg");
+    height: 28rem;
+  }
+
+  @media screen and (min-width: 1024px) {
+    background-image: url("/img/index-image.jpg");
+    height: 42rem;
+  }
 `;
 
 export const BoxTitles = styled.div`
@@ -15,6 +25,10 @@ export const BoxTitles = styled.div`
   text-align: center;
   color: #fff;
   padding-top: 2.5rem;
+
+  @media screen and (min-width: 744px) {
+    padding-right: 20.5rem;
+  }
 `;
 export const Title = styled.label`
   font-size: 2.5rem;
@@ -42,4 +56,8 @@ export const ContainerMenu = styled.div`
     showMenu ? "flex-end" : "space-between"};
   align-items: center;
   padding: 2rem;
+
+  @media screen and (min-width: 744px) {
+    padding: 2rem 4rem;
+  }
 `;

@@ -5,6 +5,10 @@ export const Wrapper = styled.div`
   width: 100vw;
   background-size: cover;
   background-image: url("/img/rodape-mobile.jpg");
+
+  @media screen and (min-width: 744px) {
+    height: 13rem;
+  }
 `;
 
 export const Footer = styled.footer`
