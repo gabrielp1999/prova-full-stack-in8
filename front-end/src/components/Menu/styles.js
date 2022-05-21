@@ -32,3 +32,8 @@ export const List = styled.ul`
 export const ItemList = styled.li`
   margin: 1rem 0;
 `;
+
+export const Link = styled.a`
+  color: #fff;
+  text-decoration: none;
+`;

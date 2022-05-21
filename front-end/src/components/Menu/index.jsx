@@ -1,6 +1,6 @@
 import * as S from "./styles";
 
-function Menu({ toogleMenu, showMenu }) {
+function Menu({ toogleMenu }) {
   return (
     <S.Wrapper>
       <S.ImgMenu
@@ -9,9 +9,15 @@ function Menu({ toogleMenu, showMenu }) {
       />
       <S.NavBar>
         <S.List>
-          <S.ItemList>lista</S.ItemList>
-          <S.ItemList>sobre mim</S.ItemList>
-          <S.ItemList>cadastro</S.ItemList>
+          <S.ItemList>
+            <S.Link href="">lista</S.Link>
+          </S.ItemList>
+          <S.ItemList>
+            <S.Link href="">sobre mim</S.Link>
+          </S.ItemList>
+          <S.ItemList>
+            <S.Link href="">cadastro</S.Link>
+          </S.ItemList>
         </S.List>
       </S.NavBar>
     </S.Wrapper>
