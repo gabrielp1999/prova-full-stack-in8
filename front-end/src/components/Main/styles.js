@@ -6,6 +6,10 @@ export const Wrapper = styled.main`
   background: #29abe2;
   text-align: center;
   padding: 2rem 0 0 0;
+
+  @media screen and (min-width: 1024px) {
+    width: 100%;
+  }
 `;
 
 export const Title = styled.label`
@@ -19,6 +23,10 @@ export const Form = styled.form`
   flex-direction: column;
   width: 70%;
   margin: 0 auto;
+
+  @media screen and (min-width: 1024px) {
+    width: 45%;
+  }
 `;
 
 export const Label = styled.label`
@@ -32,6 +40,7 @@ export const Label = styled.label`
 export const Input = styled.input`
   width: 100%;
   height: 1.5rem;
+  padding: 0.1rem 0;
   background: #29abe2;
   color: #fff;
   font-size: 1.2rem;
@@ -56,4 +65,13 @@ export const Button = styled.button`
   border: none;
   font-size: 2.5rem;
   color: #29abe2;
+
+  :hover {
+    background-color: rgba(1, 45, 81, 0.8);
+    cursor: pointer;
+  }
+
+  @media screen and (min-width: 1024px) {
+    width: 50%;
+  }
 `;

@@ -3,7 +3,6 @@ import * as S from "./styles";
 
 function Main() {
   const [userData, setUserData] = useState({});
-  const [valueFields, setValueFields] = useState();
 
   const handleChange = (event) => {
     const { name, value } = event.target;
@@ -12,9 +11,9 @@ function Main() {
 
   const onSubmit = (event) => {
     event.preventDefault();
-    setValueFields("");
     console.log(userData);
   };
+
   return (
     <S.Wrapper onSubmit={onSubmit}>
       <S.Title>Cadastro</S.Title>

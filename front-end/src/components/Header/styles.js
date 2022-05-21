@@ -16,18 +16,40 @@ export const Wrapper = styled.header`
   @media screen and (min-width: 1024px) {
     background-image: url("/img/index-image.jpg");
     height: 42rem;
+    width: 100%;
+  }
+`;
+
+export const BoxMenu = styled.div`
+  width: 72%;
+  justify-content: space-between;
+  display: none;
+  align-items: center;
+  margin: auto;
+
+  @media screen and (min-width: 1024px) {
+    display: flex;
+  }
+`;
+
+export const Link = styled.a`
+  :hover {
+    background-color: transparent;
   }
 `;
 
 export const BoxTitles = styled.div`
   display: flex;
+  width: 40%;
   flex-direction: column;
   text-align: center;
   color: #fff;
   padding-top: 2.5rem;
+  padding-left: 8rem;
 
-  @media screen and (min-width: 744px) {
-    padding-right: 20.5rem;
+  @media screen and (min-width: 1024px) {
+    padding-top: 4.5rem;
+    margin-right: 1rem;
   }
 `;
 export const Title = styled.label`
@@ -44,9 +66,21 @@ export const SubTitle = styled.label`
 
 export const ImgMenuClosed = styled.img`
   width: 2rem;
+
+  @media screen and (min-width: 1024px) {
+    display: none;
+  }
 `;
 
 export const ImgLogo = styled.img`
+  height: 2rem;
+
+  @media screen and (min-width: 1024px) {
+    display: none;
+  }
+`;
+
+export const ImgLogoDesktop = styled.img`
   height: 2rem;
 `;
 

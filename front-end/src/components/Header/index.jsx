@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import * as S from "./styles";
 import Menu from "../Menu";
+import MenuDesktop from "../MenuDesktop";
 
 function Header() {
   const [showMenu, setShowMenu] = useState(false);
@@ -19,7 +20,17 @@ function Header() {
             onClick={() => toogleMenu()}
           />
         )}
-        <S.ImgLogo src="/logo-in8-dev.svg" />
+        <S.Link target="_blank" href="https://in8.com.br/">
+          <S.ImgLogo src="/logo-in8-dev.svg" />
+        </S.Link>
+
+        <S.BoxMenu>
+          <S.Link target="_blank" href="https://in8.com.br/">
+            <S.ImgLogoDesktop src="/logo-in8-dev.svg" />
+          </S.Link>
+
+          <MenuDesktop />
+        </S.BoxMenu>
       </S.ContainerMenu>
 
       <S.BoxTitles>
