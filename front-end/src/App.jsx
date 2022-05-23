@@ -9,17 +9,17 @@ function App() {
   document.title = "Prova Full-Stack IN8";
 
   const person = usePerson();
-  const [personData, setPersondata] = useState([]);
+  const [personData, setPersonData] = useState([]);
 
   useEffect(() => {
     person.getPerson().then((data) => {
-      setPersondata(data);
+      setPersonData(data);
     });
   }, []);
   return (
     <div className="App">
       <Header />
-      <Main setPersondata={setPersondata} />
+      <Main setPersonData={setPersonData} />
       <Table personData={personData} />
       <Footer />
     </div>

@@ -11,7 +11,7 @@ function Header() {
   };
 
   return (
-    <S.Wrapper showMenu={showMenu}>
+    <S.Wrapper showMenu={showMenu} id="header">
       <S.ContainerMenu showMenu={showMenu}>
         {showMenu && <Menu toogleMenu={toogleMenu} />}
         {!showMenu && (

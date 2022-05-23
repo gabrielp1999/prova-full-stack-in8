@@ -3,7 +3,7 @@ import * as S from "./styles";
 import Input from "../Input/index";
 import usePerson from "../../hooks/usePerson";
 
-function Main({ setPersondata }) {
+function Main({ setPersonData }) {
   const [stateFields, setStateFields] = useState("");
   const [errorName, setErrorName] = useState("");
   const [errorEmail, setErrorEmail] = useState("");
@@ -30,7 +30,7 @@ function Main({ setPersondata }) {
         })
         .then((data) => {
           alert("Cadastro realizado com sucesso!");
-          setPersondata(data);
+          setPersonData(data);
           cleanFields();
           cleanError();
         });
@@ -91,7 +91,7 @@ function Main({ setPersondata }) {
   };
 
   return (
-    <S.Wrapper onSubmit={onSubmit}>
+    <S.Wrapper id="cadastro" onSubmit={onSubmit}>
       <S.Title>Cadastro</S.Title>
       <S.Form>
         <S.Label>Nome</S.Label>

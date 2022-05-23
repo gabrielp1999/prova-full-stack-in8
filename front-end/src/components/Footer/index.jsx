@@ -2,7 +2,7 @@ import * as S from "./styles";
 
 function Footer() {
   return (
-    <S.Wrapper>
+    <S.Wrapper id="sobre-mim">
       <S.Footer>
         <S.Description>Gabriel de Souza Miranda</S.Description>
         <S.Description>gabriel.gsm2017@gmail.com</S.Description>

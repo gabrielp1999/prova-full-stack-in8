@@ -4,7 +4,7 @@ import "react-tabs/style/react-tabs.css";
 
 function Table({ personData }) {
   return (
-    <S.Wrapper>
+    <S.Wrapper id="lista">
       <S.Title>LISTA DE CADASTRO</S.Title>
 
       <S.Table>
@@ -44,14 +44,18 @@ function Table({ personData }) {
 
         <TabPanel>
           <table>
-            <tr>
-              <td>NOME</td>
-              <td>Gabriel</td>
-            </tr>
-            <tr>
-              <td>EMAIL</td>
-              <td>gabriel.gsm2017@gmail.com</td>
-            </tr>
+            <thead>
+              <tr>
+                <td>NOME</td>
+                <td>Gabriel</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>EMAIL</td>
+                <td>gabriel.gsm2017@gmail.com</td>
+              </tr>
+            </tbody>
           </table>
         </TabPanel>
         <TabPanel>
@@ -67,7 +71,7 @@ function Table({ personData }) {
         </TabPanel>
       </Tabs>
 
-      <S.Link href="/">
+      <S.Link href="#header">
         <S.ImgTopPage src="/icons/topo-pag.svg" />
       </S.Link>
     </S.Wrapper>
