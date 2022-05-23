@@ -1,5 +1,6 @@
 const express = require("express");
 const bodyParser = require("body-parser");
+var cors = require("cors");
 
 const personRouter = require("./routers/person/index");
 
@@ -10,6 +11,7 @@ app.use(
   })
 );
 
+app.use(cors());
 app.use(bodyParser.json());
 app.use("/pessoa", personRouter);
 

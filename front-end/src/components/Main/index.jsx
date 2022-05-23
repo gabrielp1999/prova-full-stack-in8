@@ -1,13 +1,16 @@
 import React, { useState } from "react";
 import * as S from "./styles";
 import Input from "../Input/index";
+import usePerson from "../../hooks/usePerson";
 
-function Main() {
+function Main({ setPersondata }) {
   const [stateFields, setStateFields] = useState("");
   const [errorName, setErrorName] = useState("");
   const [errorEmail, setErrorEmail] = useState("");
   const [errorDate, setErrorDate] = useState("");
   const [errorCell, setErrorCell] = useState("");
+
+  const person = usePerson();
 
   const handleChange = (event) => {
     const { name, value } = event.target;
@@ -18,9 +21,29 @@ function Main() {
     event.preventDefault();
     const isValid = validateForm();
     if (isValid) {
-      console.log(stateFields);
-      cleanError();
+      person
+        .postPerson({
+          name: stateFields.userName,
+          email: stateFields.userEmail,
+          birthday: stateFields.userDate,
+          phone: stateFields.userCell,
+        })
+        .then((data) => {
+          alert("Cadastro realizado com sucesso!");
+          setPersondata(data);
+          cleanFields();
+          cleanError();
+        });
     }
+  };
+
+  const cleanFields = () => {
+    setStateFields({
+      userName: "",
+      userEmail: "",
+      userDate: "",
+      userCell: "",
+    });
   };
 
   const validateForm = () => {
@@ -105,9 +128,7 @@ function Main() {
           error={errorCell}
         />
 
-        <S.Button disabled={false} type="submit">
-          Cadastrar
-        </S.Button>
+        <S.Button type="submit">Cadastrar</S.Button>
       </S.Form>
     </S.Wrapper>
   );

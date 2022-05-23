@@ -1,9 +1,8 @@
 import * as S from "./styles";
-import React, { useState } from "react";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import "react-tabs/style/react-tabs.css";
 
-function Table() {
+function Table({ personData }) {
   return (
     <S.Wrapper>
       <S.Title>LISTA DE CADASTRO</S.Title>
@@ -19,29 +18,20 @@ function Table() {
               TELEFONE
             </S.TableCollum>
           </S.TableRow>
-          <S.TableRow className="borderLeft borderRight">
-            <S.TableCollum className="borderLeft">1</S.TableCollum>
-            <S.TableCollum>Gabriel</S.TableCollum>
-            <S.TableCollum>gabriel.gsm2017@gmail.com</S.TableCollum>
-            <S.TableCollum>1999</S.TableCollum>
-            <S.TableCollum className="borderRight">31992024080</S.TableCollum>
-          </S.TableRow>
 
-          <S.TableRow className="borderLeft borderRight">
-            <S.TableCollum className="borderLeft">2</S.TableCollum>
-            <S.TableCollum></S.TableCollum>
-            <S.TableCollum></S.TableCollum>
-            <S.TableCollum></S.TableCollum>
-            <S.TableCollum className="borderRight"></S.TableCollum>
-          </S.TableRow>
-
-          <S.TableRow className="borderLeft borderRight">
-            <S.TableCollum className="borderLeft">3</S.TableCollum>
-            <S.TableCollum></S.TableCollum>
-            <S.TableCollum></S.TableCollum>
-            <S.TableCollum></S.TableCollum>
-            <S.TableCollum className="borderRight"></S.TableCollum>
-          </S.TableRow>
+          {personData?.map((person, index) => (
+            <S.TableRow key={index} className="borderLeft borderRight">
+              <S.TableCollum className="borderLeft">{index + 1}</S.TableCollum>
+              <S.TableCollum>{person.name}</S.TableCollum>
+              <S.TableCollum>{person.email}</S.TableCollum>
+              <S.TableCollum>
+                {new Date(person.birthday).getFullYear()}
+              </S.TableCollum>
+              <S.TableCollum className="borderRight">
+                {person.phone}
+              </S.TableCollum>
+            </S.TableRow>
+          ))}
         </tbody>
       </S.Table>
 
