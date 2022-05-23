@@ -1,16 +1,34 @@
 import styled from "styled-components";
 
 export const Wrapper = styled.div`
-  width: 100vw;
   height: 25rem;
   background: #fff;
   text-align: center;
-  padding: 2rem 0 0 0;
+  padding: 2rem;
   @media screen and (min-width: 1024px) {
     width: 100%;
   }
 
   .tabs {
+    ul {
+      display: flex;
+      margin: 0;
+
+      li {
+        width: 4rem;
+        height: 1.5rem;
+        border-radius: 0;
+        font-size: 1.2rem;
+        border-color: #aaa;
+        color: #012d51;
+        margin-right: 0.5rem;
+        border-bottom: none;
+      }
+      .react-tabs__tab--selected {
+        border-color: #29abe2;
+      }
+    }
+
     @media screen and (min-width: 764px) {
       display: none;
     }

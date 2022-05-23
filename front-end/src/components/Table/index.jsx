@@ -1,6 +1,7 @@
 import * as S from "./styles";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import "react-tabs/style/react-tabs.css";
+import ItemUser from "../ItemUser";
 
 function Table({ personData }) {
   return (
@@ -37,38 +38,16 @@ function Table({ personData }) {
 
       <Tabs className="tabs">
         <TabList>
-          <Tab>1</Tab>
-          <Tab>2</Tab>
-          <Tab>3</Tab>
+          {personData?.map((_item, index) => (
+            <Tab key={`${index}-number-tab`}>{index + 1}</Tab>
+          ))}
         </TabList>
 
-        <TabPanel>
-          <table>
-            <thead>
-              <tr>
-                <td>NOME</td>
-                <td>Gabriel</td>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>EMAIL</td>
-                <td>gabriel.gsm2017@gmail.com</td>
-              </tr>
-            </tbody>
-          </table>
-        </TabPanel>
-        <TabPanel>
-          <h2>Deina</h2>
-          <h2>Email</h2>
-          <h2>Nascimento</h2>
-        </TabPanel>
-
-        <TabPanel>
-          <h2>Samuel</h2>
-          <h2>Email</h2>
-          <h2>Nascimento</h2>
-        </TabPanel>
+        {personData?.map((item, index) => (
+          <TabPanel key={`${index}-item-tab`}>
+            <ItemUser personData={item} />
+          </TabPanel>
+        ))}
       </Tabs>
 
       <S.Link href="#header">
