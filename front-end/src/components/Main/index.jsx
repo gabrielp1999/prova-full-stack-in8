@@ -49,27 +49,30 @@ function Main({ setPersonData }) {
   const validateForm = () => {
     let isValid = true;
 
-    if (stateFields.userName.length < 3) {
+    if (!stateFields?.userName || stateFields?.userName?.length < 3) {
       setErrorName("Campo obrigatório");
       isValid = false;
     }
 
-    if (stateFields.userEmail.length < 1) {
+    if (!stateFields?.userEmail || stateFields?.userEmail?.length < 1) {
       setErrorEmail("Campo Obrigatorio");
       isValid = false;
     }
 
-    if (stateFields.userCell.length > 0 && stateFields.userCell.length < 11) {
+    if (
+      !stateFields?.userCell ||
+      (stateFields?.userCell?.length > 0 && stateFields?.userCell?.length < 11)
+    ) {
       setErrorCell("Numero invalido");
       isValid = false;
     }
 
-    if (stateFields.userCell.length === 0) {
+    if (!stateFields?.userCell || stateFields?.userCell?.length === 0) {
       setErrorCell("Campo Obrigatorio");
       isValid = false;
     }
 
-    if (stateFields.userDate.length < 8) {
+    if (!stateFields?.userDate || stateFields?.userDate?.length < 8) {
       setErrorDate("Campo Obrigatorio");
       isValid = false;
     }
@@ -88,6 +91,7 @@ function Main({ setPersonData }) {
     setErrorCell("");
     setErrorName("");
     setErrorEmail("");
+    setErrorDate("");
   };
 
   return (

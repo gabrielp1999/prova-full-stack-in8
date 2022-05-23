@@ -5,14 +5,15 @@ export const Wrapper = styled.div`
   background: #fff;
   text-align: center;
   padding: 2rem;
-  @media screen and (min-width: 1024px) {
-    width: 100%;
-  }
 
   .tabs {
+    .iEOHyj .tabs ul {
+      width: 79vw;
+    }
     ul {
       display: flex;
       margin: 0;
+      border-color: #29abe2;
 
       li {
         width: 4rem;
@@ -26,6 +27,9 @@ export const Wrapper = styled.div`
       }
       .react-tabs__tab--selected {
         border-color: #29abe2;
+      }
+      .react-tabs__tab-list {
+        border: none;
       }
     }
 

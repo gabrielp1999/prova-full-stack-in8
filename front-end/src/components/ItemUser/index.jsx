@@ -12,7 +12,9 @@ function ItemUser({ personData }) {
       </S.Row>
       <S.Row>
         <S.FieldName>NASC.</S.FieldName>
-        <S.FieldValue>{personData.birthday}</S.FieldValue>
+        <S.FieldValue>
+          {new Date(personData.birthday).toLocaleDateString("pt-br")}
+        </S.FieldValue>
       </S.Row>
       <S.Row>
         <S.FieldName>TEL.</S.FieldName>
