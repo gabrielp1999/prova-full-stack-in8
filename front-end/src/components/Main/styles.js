@@ -52,6 +52,10 @@ export const Button = styled.button`
     cursor: pointer;
   }
 
+  @media screen and (min-width: 768px) {
+    width: 70%;
+  }
+
   @media screen and (min-width: 1024px) {
     width: 50%;
   }
