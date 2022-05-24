@@ -6,10 +6,6 @@ export const Wrapper = styled.nav`
   color: #fff;
   font-size: 1.2rem;
   font-family: RobotoL;
-
-  @media screen and (max-width: 1024px) {
-    display: none;
-  }
 `;
 
 export const List = styled.ul`
