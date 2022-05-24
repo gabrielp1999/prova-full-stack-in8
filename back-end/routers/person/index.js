@@ -6,13 +6,13 @@ let people = [
     name: "Gabriel",
     email: "gabriel.gsm2017@gmail.com",
     birthday: new Date(1999, 9, 26),
-    phone: "31 992024080",
+    phone: "31992024080",
   },
   {
     name: "Samuel",
-    email: "samuel.gsm2017@gmail.com",
+    email: "samuel.rps17@gmail.com",
     birthday: new Date(1994, 2, 6),
-    phone: "31 987677765",
+    phone: "11987677765",
   },
 ];
 

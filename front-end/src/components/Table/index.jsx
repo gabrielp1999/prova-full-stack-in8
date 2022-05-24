@@ -26,7 +26,8 @@ function Table({ personData }) {
               <S.TableCollum>{person.name}</S.TableCollum>
               <S.TableCollum>{person.email}</S.TableCollum>
               <S.TableCollum>
-                {new Date(person.birthday).getFullYear()}
+                {/* {new Date(person.birthday).getFullYear()} */}
+                {new Date(person.birthday).toLocaleDateString("pt-br")}
               </S.TableCollum>
               <S.TableCollum className="borderRight">
                 {person.phone}
