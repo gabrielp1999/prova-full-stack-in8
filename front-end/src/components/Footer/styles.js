@@ -6,15 +6,11 @@ export const Wrapper = styled.div`
   background-size: cover;
   background-image: url("/img/rodape-mobile.jpg");
 
-  @media screen and (min-width: 1024px) {
-    background-image: url("/img/rodape-desktop.jpg");
-  }
-
-  @media screen and (min-width: 744px) {
+  @media screen and (min-width: 768px) {
     height: 13rem;
   }
-
   @media screen and (min-width: 1024px) {
+    background-image: url("/img/rodape-desktop.jpg");
     width: 100%;
     height: 12rem;
   }

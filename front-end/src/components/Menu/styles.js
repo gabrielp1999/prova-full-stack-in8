@@ -8,7 +8,7 @@ export const Wrapper = styled.div`
   position: absolute;
   top: 0;
   left: 0;
-  @media screen and (min-width: 744px) {
+  @media screen and (min-width: 768px) {
     padding: 2.1rem 4rem;
   }
 `;

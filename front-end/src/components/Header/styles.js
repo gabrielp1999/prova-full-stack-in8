@@ -6,9 +6,8 @@ export const Wrapper = styled.header`
   background-image: url("/img/index-image-mobile.jpg");
   background-size: cover;
   background-repeat: no-repeat;
-  /* opacity: ${({ showMenu }) => (showMenu ? "0.6" : "1")}; */
 
-  @media screen and (min-width: 744px) {
+  @media screen and (min-width: 768px) {
     background-image: url("/img/index-image.jpg");
     height: 28rem;
   }
@@ -91,7 +90,7 @@ export const ContainerMenu = styled.div`
   align-items: center;
   padding: 2rem;
 
-  @media screen and (min-width: 744px) {
+  @media screen and (min-width: 768px) {
     padding: 2rem 4rem;
   }
 `;
